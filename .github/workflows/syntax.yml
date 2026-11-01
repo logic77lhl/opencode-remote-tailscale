@@ -1,0 +1,25 @@
+name: syntax
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  powershell:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse PowerShell scripts
+        shell: pwsh
+        run: |
+          $failed = $false
+          Get-ChildItem scripts -Recurse -Filter *.ps1 | ForEach-Object {
+            try {
+              [void][scriptblock]::Create((Get-Content -Raw -LiteralPath $_.FullName))
+              Write-Host "OK   $($_.FullName)"
+            } catch {
+              Write-Host "FAIL $($_.FullName): $($_.Exception.Message)"
+              $failed = $true
+            }
+          }
+          if ($failed) { exit 1 }

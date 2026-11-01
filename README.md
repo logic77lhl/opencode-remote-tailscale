@@ -50,6 +50,7 @@ OpenCode 后台服务 127.0.0.1:28894
 |---|---|
 | 系统 | Windows 10 / 11 |
 | PowerShell | 5.1+（系统自带即可） |
+| Node.js | 18+（仅用于 `npm install -g`） |
 | OpenCode | `@opencode/cli`（测试版本 `2.2.5`） |
 | Tailscale | 免费 Personal 账号即可，需登录 |
 | 网络 | 能访问 `login.tailscale.com` 和 `*.ts.net` |

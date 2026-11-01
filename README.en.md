@@ -46,6 +46,7 @@ OpenCode service 127.0.0.1:28894
 |---|---|
 | OS | Windows 10 / 11 |
 | PowerShell | 5.1+ |
+| Node.js | 18+ (only to run `npm install -g`) |
 | OpenCode | `@opencode/cli` (tested `2.2.5`) |
 | Tailscale | Free Personal account, signed in |
 | Network | Access to `login.tailscale.com` and `*.ts.net` |
