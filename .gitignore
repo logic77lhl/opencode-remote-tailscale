@@ -1,0 +1,16 @@
+# Runtime files
+logs/
+*.log
+*.out
+*.err
+opencode-remote-qr-*.html
+qr*.html
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
